@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4>Enter your phone number</h4>
+<form action="" autocomplete="off" method='post'>
+    {{ form.csrf_token }}
+    <div class="form-group">
+        <fieldset>
+            {{ form.first_name.label }}
+            {{ form.first_name(class='form-control', placeholder='First Name(enter_phone.html)') }}
+        </fieldset>
+        <fieldset>
+            {{ form.last_name.label }}
+            {{ form.last_name(class='form-control', placeholder='Last Name') }}
+        </fieldset>
+        <fieldset>
+            {{ form.address.label }}
+            {{ form.address(class='form-control', placeholder= 'Address') }}
+        </fieldset>
+        <fieldset>
+            {{ form.phone_num.label }}
+            {{ form.phone_num(class='form-control', placeholder='Phone Number') }}
+        </fieldset>
+        {{ form.submit(class='btn btn-success') }}
+    </div>
+
+
+{% endblock %}
